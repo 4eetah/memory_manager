@@ -1,0 +1,260 @@
+<< Run speed test >>
+<------------------------------------------------>
+new package evaluation
+Running time = 0.026441 sec
+
+mm package evaluation
+Running time = 0.020838 sec
+
+Complete.
+
+<< Run STL custom allocator test with map >>
+<------------------------------------------------>
+A: 8
+C: 4
+E: 12
+H: 5
+L: 11
+M: 9
+P: 10
+R: 3
+S: 0
+X: 7
+Complete.
+
+<< Run ten threads simulataneously on heap >>
+<------------------------------------------------>
+Listing of 10 threads allocate, deallocate operations
+Warning! In some cases listing can overlap.
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d455d48
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 752 2 0	FREE	next: 0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d46c7c0
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 2168 2 0	FREE	next: 0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d478280
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 47808 2 1	ALLOCATED
+0x7fe08d478280: 3512 2 0	FREE	next: 0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d48d018
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 47808 2 1	ALLOCATED
+0x7fe08d478280: 85400 2 1	ALLOCATED
+0x7fe08d48d018: 4128 2 0	FREE	next: 0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d491130
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 47808 2 1	ALLOCATED
+0x7fe08d478280: 85400 2 1	ALLOCATED
+0x7fe08d48d018: 16664 2 1	ALLOCATED
+0x7fe08d491130: 41432 2 1	ALLOCATED
+0x7fe08d49b308: 2376 2 1	ALLOCATED
+0x7fe08d49bc50: 90040 2 1	ALLOCATED
+0x7fe08d4b1c08: 68704 2 1	ALLOCATED
+0x7fe08d4c2868: 20072 2 1	ALLOCATED
+0x7fe08d4c76d0: 10600 2 0	FREE	next: 0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d4c76d0
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 47808 2 1	ALLOCATED
+0x7fe08d478280: 85400 2 1	ALLOCATED
+0x7fe08d48d018: 16664 2 1	ALLOCATED
+0x7fe08d491130: 41432 2 1	ALLOCATED
+0x7fe08d49b308: 2376 2 1	ALLOCATED
+0x7fe08d49bc50: 90040 2 1	ALLOCATED
+0x7fe08d4b1c08: 68704 2 1	ALLOCATED
+0x7fe08d4c2868: 20072 2 1	ALLOCATED
+0x7fe08d4c76d0: 10600 2 0	FREE	next: 0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d4c76d0
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 47808 2 1	ALLOCATED
+0x7fe08d478280: 85400 2 1	ALLOCATED
+0x7fe08d48d018: 16664 2 1	ALLOCATED
+0x7fe08d491130: 41432 2 1	ALLOCATED
+0x7fe08d49b308: 2376 2 1	ALLOCATED
+0x7fe08d49bc50: 90040 2 1	ALLOCATED
+0x7fe08d4b1c08: 68704 2 1	ALLOCATED
+0x7fe08d4c2868: 20072 2 1	ALLOCATED
+0x7fe08d4c76d0: 10600 2 0	FREE	next: 0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d4c76d0
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 47808 2 1	ALLOCATED
+0x7fe08d478280: 85400 2 1	ALLOCATED
+0x7fe08d48d018: 16664 2 1	ALLOCATED
+0x7fe08d491130: 41432 2 1	ALLOCATED
+0x7fe08d49b308: 2376 2 1	ALLOCATED
+0x7fe08d49bc50: 90040 2 1	ALLOCATED
+0x7fe08d4b1c08: 68704 2 1	ALLOCATED
+0x7fe08d4c2868: 20072 2 1	ALLOCATED
+0x7fe08d4c76d0: 10600 2 0	FREE	next: 0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d4c76d0
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 47808 2 1	ALLOCATED
+0x7fe08d478280: 85400 2 1	ALLOCATED
+0x7fe08d48d018: 16664 2 1	ALLOCATED
+0x7fe08d491130: 41432 2 1	ALLOCATED
+0x7fe08d49b308: 2376 2 1	ALLOCATED
+0x7fe08d49bc50: 90040 2 1	ALLOCATED
+0x7fe08d4b1c08: 68704 2 1	ALLOCATED
+0x7fe08d4c2868: 20072 2 1	ALLOCATED
+0x7fe08d4c76d0: 10600 2 0	FREE	next: 0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d4c76d0
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 47808 2 1	ALLOCATED
+0x7fe08d478280: 85400 2 1	ALLOCATED
+0x7fe08d48d018: 16664 2 1	ALLOCATED
+0x7fe08d491130: 41432 2 1	ALLOCATED
+0x7fe08d49b308: 2376 2 1	ALLOCATED
+0x7fe08d49bc50: 90040 2 1	ALLOCATED
+0x7fe08d4b1c08: 68704 2 1	ALLOCATED
+0x7fe08d4c2868: 20072 2 1	ALLOCATED
+0x7fe08d4c76d0: 10600 2 0	FREE	next: 0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d491130
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 47808 2 1	ALLOCATED
+0x7fe08d478280: 85400 2 1	ALLOCATED
+0x7fe08d48d018: 16664 2 1	ALLOCATED
+0x7fe08d491130: 41432 2 0	FREE	next: 0x7fe08d4c76d0 prev: 0
+0x7fe08d49b308: 2376 0 1	ALLOCATED
+0x7fe08d49bc50: 90040 2 1	ALLOCATED
+0x7fe08d4b1c08: 68704 2 1	ALLOCATED
+0x7fe08d4c2868: 20072 2 1	ALLOCATED
+0x7fe08d4c76d0: 10600 2 0	FREE	next: 0 prev: 0x7fe08d491130
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d46c7c0
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 47808 2 0	FREE	next: 0x7fe08d491130 prev: 0
+0x7fe08d478280: 85400 0 1	ALLOCATED
+0x7fe08d48d018: 16664 2 1	ALLOCATED
+0x7fe08d491130: 41432 2 0	FREE	next: 0x7fe08d4c76d0 prev: 0x7fe08d46c7c0
+0x7fe08d49b308: 2376 0 1	ALLOCATED
+0x7fe08d49bc50: 90040 2 1	ALLOCATED
+0x7fe08d4b1c08: 68704 2 1	ALLOCATED
+0x7fe08d4c2868: 20072 2 1	ALLOCATED
+0x7fe08d4c76d0: 10600 2 0	FREE	next: 0 prev: 0x7fe08d491130
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d491130
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 47808 2 0	FREE	next: 0x7fe08d4c76d0 prev: 0x7fe08d491130
+0x7fe08d478280: 85400 0 1	ALLOCATED
+0x7fe08d48d018: 16664 2 1	ALLOCATED
+0x7fe08d491130: 43808 2 0	FREE	next: 0x7fe08d46c7c0 prev: 0
+0x7fe08d49bc50: 90040 0 1	ALLOCATED
+0x7fe08d4b1c08: 68704 2 1	ALLOCATED
+0x7fe08d4c2868: 20072 2 1	ALLOCATED
+0x7fe08d4c76d0: 10600 2 0	FREE	next: 0 prev: 0x7fe08d46c7c0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d46c7c0
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 133208 2 0	FREE	next: 0x7fe08d491130 prev: 0
+0x7fe08d48d018: 16664 0 1	ALLOCATED
+0x7fe08d491130: 43808 2 0	FREE	next: 0x7fe08d4c76d0 prev: 0x7fe08d46c7c0
+0x7fe08d49bc50: 90040 0 1	ALLOCATED
+0x7fe08d4b1c08: 68704 2 1	ALLOCATED
+0x7fe08d4c2868: 20072 2 1	ALLOCATED
+0x7fe08d4c76d0: 10600 2 0	FREE	next: 0 prev: 0x7fe08d491130
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d4c2868
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 133208 2 0	FREE	next: 0x7fe08d491130 prev: 0x7fe08d4c2868
+0x7fe08d48d018: 16664 0 1	ALLOCATED
+0x7fe08d491130: 43808 2 0	FREE	next: 0 prev: 0x7fe08d46c7c0
+0x7fe08d49bc50: 90040 0 1	ALLOCATED
+0x7fe08d4b1c08: 68704 2 1	ALLOCATED
+0x7fe08d4c2868: 30672 2 0	FREE	next: 0x7fe08d46c7c0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d4b1c08
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 133208 2 0	FREE	next: 0x7fe08d491130 prev: 0x7fe08d4b1c08
+0x7fe08d48d018: 16664 0 1	ALLOCATED
+0x7fe08d491130: 43808 2 0	FREE	next: 0 prev: 0x7fe08d46c7c0
+0x7fe08d49bc50: 90040 0 1	ALLOCATED
+0x7fe08d4b1c08: 99376 2 0	FREE	next: 0x7fe08d46c7c0 prev: 0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d46c7c0
+0x7fe08d440018: 89392 2 1	ALLOCATED
+0x7fe08d455d48: 92792 2 1	ALLOCATED
+0x7fe08d46c7c0: 193680 2 0	FREE	next: 0x7fe08d4b1c08 prev: 0
+0x7fe08d49bc50: 90040 0 1	ALLOCATED
+0x7fe08d4b1c08: 99376 2 0	FREE	next: 0 prev: 0x7fe08d46c7c0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d440018
+0x7fe08d440018: 89392 2 0	FREE	next: 0x7fe08d46c7c0 prev: 0
+0x7fe08d455d48: 92792 0 1	ALLOCATED
+0x7fe08d46c7c0: 193680 2 0	FREE	next: 0x7fe08d4b1c08 prev: 0x7fe08d440018
+0x7fe08d49bc50: 90040 0 1	ALLOCATED
+0x7fe08d4b1c08: 99376 2 0	FREE	next: 0 prev: 0x7fe08d46c7c0
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d440018
+0x7fe08d440018: 375864 2 0	FREE	next: 0x7fe08d4b1c08 prev: 0
+0x7fe08d49bc50: 90040 0 1	ALLOCATED
+0x7fe08d4b1c08: 99376 2 0	FREE	next: 0 prev: 0x7fe08d440018
+END OF HEAP
+
+-------------------------------------------------------------------------
+FREE_LIST_HEAD: 0x7fe08d440018
+0x7fe08d440018: 565280 2 0	FREE	next: 0 prev: 0
+END OF HEAP
+
+Complete.
+
