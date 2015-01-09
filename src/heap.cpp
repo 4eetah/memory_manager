@@ -25,7 +25,7 @@ Heap::Heap(const Heap & other) {
 		exit(EXIT_FAILURE);
 	}
 	mem_max_addr = mem_start_brk + heapSize;
-	mem_brk = mem_start_brk + (other.mem_start_brk - other.mem_brk);                  
+	mem_brk = mem_start_brk + (other.mem_brk - other.mem_start_brk);                  
 	memcpy(mem_start_brk, other.mem_start_brk, heapSize);
 }
 
