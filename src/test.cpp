@@ -178,8 +178,8 @@ void eval_package_speed(test_func) {
 }
 
 /*
- * eval_mm_speed - This is the function that is used by fcyc()
- *    to measure the running time of the mm malloc package.
+ * eval_mm_speed - measure the running time of the
+ * mm package on the set of traces. 
  */
 void eval_mm_speed(trace_t * trace)
 {
