@@ -121,7 +121,7 @@ int main()
         tvec.push_back(std::thread(test_thread_safe_alloc_free));
     }
 
-    std::for_each(tvec.begin(), thvec.end(), std::mem_fn(&std::thread::join));
+    std::for_each(tvec.begin(), tvec.end(), std::mem_fn(&std::thread::join));
         
     std::cout << "Complete.\n";
     return 0;
