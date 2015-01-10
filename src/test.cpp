@@ -11,6 +11,7 @@
 #include <memory>
 #include <mutex>
 #include <chrono>
+#include <functional>
 #include "mm.h"
 #include "my_alloc.h"
 #include "thread_safe_mm.h"
@@ -117,14 +118,11 @@ int main()
     std::cout << "Warning! In some cases listing can overlap\n";
     std::vector<std::thread> tvec;
     for(int i = 0; i < threadNum; i++) {
-        std::thread th(test_thread_safe_alloc_free);
-        tvec.push_back(move(th));
+        tvec.push_back(std::thread(test_thread_safe_alloc_free));
     }
 
-    for (std::thread & th : tvec) {
-        if (th.joinable())
-            th.join();
-    }
+    std::for_each(tvec.begin(), thvec.end(), std::mem_fn(&std::thread::join));
+        
     std::cout << "Complete.\n";
     return 0;
 }
