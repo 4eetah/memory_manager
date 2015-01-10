@@ -20,6 +20,10 @@ exception
 string
 -
 
+.././hdr/memlib.h
+block.h
+.././hdr/block.h
+
 .././hdr/mm.h
 heap.h
 .././hdr/heap.h
@@ -37,6 +41,20 @@ mm.h
 .././hdr/mm.h
 mutex
 -
+
+/home/den/Allocator/src/heap.cpp
+iostream
+-
+string.h
+-
+unistd.h
+-
+mem_exception.h
+/home/den/Allocator/src/mem_exception.h
+heap.h
+/home/den/Allocator/src/heap.h
+memlib.h
+/home/den/Allocator/src/memlib.h
 
 /home/den/Allocator/src/test.cpp
 iostream
@@ -69,4 +87,10 @@ my_alloc.h
 /home/den/Allocator/src/my_alloc.h
 thread_safe_mm.h
 /home/den/Allocator/src/thread_safe_mm.h
+
+/home/den/Allocator/src/thread_safe_mm.cpp
+thread_safe_mm.h
+/home/den/Allocator/src/thread_safe_mm.h
+iostream
+-
 
