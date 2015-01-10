@@ -60,8 +60,6 @@ void eval_package_speed(test_func);
 void test_stl_custom_alloc();
 
 /* variables for testing threadsafe allocator */
-bool start = false;
-std::vector<void*> v;
 void test_thread_safe_alloc_free();
 
 /* wrapper for testing multiple threads on heap */
