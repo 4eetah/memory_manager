@@ -76,7 +76,6 @@ public:
         ptr = tm.allocate(n);
         std::cout << "-------------------------------------------------------------------------";
         tm.checkHeap();
-        std::this_thread::sleep_for(std::chrono::milliseconds(rand() % 1000)); // to avoid alloc, dealloc operations
     }                                                                          // run sequentially
     ~thread_safe_mm_wrapper() {
         tm.deallocate(ptr);
@@ -137,7 +136,8 @@ int main()
 void test_thread_safe_alloc_free() {
     size_t maxBytes = 100000;
     thread_safe_mm_wrapper ob(rand() % maxBytes);
-}
+    std::this_thread::sleep_for(std::chrono::milliseconds(rand() % 1000));       // to avoid alloc, dealloc operations
+}                                                                               // run sequentially   
 
 void test_stl_custom_alloc() {
     std::ifstream fIn;
