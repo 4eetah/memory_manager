@@ -93,7 +93,7 @@ void* Heap::mem_sbrk(size_t incr) {
 		throw mem_exception("ERROR: mem_sbrk failed. Ran out of memory...\n");
 	}
 	mem_brk += incr;
-	return old_brk;
+	return old_brk;a
 }
 
 /*

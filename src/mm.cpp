@@ -97,7 +97,11 @@ void* MemoryManager::allocate (size_t size) {
 
     ptrFreeBlock = reinterpret_cast<BlockInfo*>(h.searchFreeBlock(reqSize));
     if (ptrFreeBlock == nullptr) {
-        h.requestMoreSpace(reqSize);
+        try {
+            h.requestMoreSpace(reqSize);
+        } catch (mem_exception & e) {
+            throw;
+        }
         ptrFreeBlock = reinterpret_cast<BlockInfo*>(h.searchFreeBlock(reqSize));
     }
 

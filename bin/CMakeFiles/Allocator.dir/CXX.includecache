@@ -20,10 +20,6 @@ exception
 string
 -
 
-.././hdr/memlib.h
-block.h
-.././hdr/block.h
-
 .././hdr/mm.h
 heap.h
 .././hdr/heap.h
@@ -42,30 +38,6 @@ mm.h
 mutex
 -
 
-/home/den/Allocator/src/heap.cpp
-iostream
--
-string.h
--
-unistd.h
--
-mem_exception.h
-/home/den/Allocator/src/mem_exception.h
-heap.h
-/home/den/Allocator/src/heap.h
-memlib.h
-/home/den/Allocator/src/memlib.h
-
-/home/den/Allocator/src/mm.cpp
-iostream
--
-memlib.h
-/home/den/Allocator/src/memlib.h
-mm.h
-/home/den/Allocator/src/mm.h
-block.h
-/home/den/Allocator/src/block.h
-
 /home/den/Allocator/src/test.cpp
 iostream
 -
@@ -79,8 +51,6 @@ ctime
 -
 thread
 -
-future
--
 map
 -
 vector
@@ -89,9 +59,9 @@ algorithm
 -
 memory
 -
-mutex
--
 chrono
+-
+functional
 -
 mm.h
 /home/den/Allocator/src/mm.h
@@ -99,10 +69,4 @@ my_alloc.h
 /home/den/Allocator/src/my_alloc.h
 thread_safe_mm.h
 /home/den/Allocator/src/thread_safe_mm.h
-
-/home/den/Allocator/src/thread_safe_mm.cpp
-thread_safe_mm.h
-/home/den/Allocator/src/thread_safe_mm.h
-iostream
--
 

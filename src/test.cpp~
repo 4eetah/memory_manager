@@ -60,6 +60,8 @@ void eval_package_speed(test_func);
 void test_stl_custom_alloc();
 
 /* variables for testing threadsafe allocator */
+std::mutex mtx;
+std::condition_variable cvar;
 bool start = false;
 std::vector<void*> v;
 void test_thread_safe_alloc_free();
@@ -70,14 +72,10 @@ class thread_safe_mm_wrapper {
     void * ptr;
 public:
     thread_safe_mm_wrapper(size_t n) {
-        try {
-            ptr = tm.allocate(n);
-        } catch (mem_exception & e) {
-            std::cout << e.what() << std::endl;
-        }
+        ptr = tm.allocate(n);
         std::cout << "-------------------------------------------------------------------------";
         tm.checkHeap();
-    }                                                                          
+    }                                                                          // run sequentially
     ~thread_safe_mm_wrapper() {
         tm.deallocate(ptr);
         std::cout << "-------------------------------------------------------------------------";
