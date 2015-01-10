@@ -18,9 +18,9 @@ private:
 public:
     ThreadSafeMM();
     ~ThreadSafeMM();
-//    ThreadSafeMM(const ThreadSafeMM&) = delete;
+    ThreadSafeMM(const ThreadSafeMM&) = delete;
     ThreadSafeMM& operator=(const ThreadSafeMM&) = delete;
-//    ThreadSafeMM(ThreadSafeMM&&) = delete;
+    ThreadSafeMM(ThreadSafeMM&&) = delete;
     ThreadSafeMM& operator=(ThreadSafeMM&&) = delete;
 
 // main function

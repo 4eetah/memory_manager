@@ -77,7 +77,11 @@ public:
         }
         std::cout << "-------------------------------------------------------------------------";
         tm.checkHeap();
+<<<<<<< HEAD
     }                                                                          
+=======
+    }                                                                          // run sequentially
+>>>>>>> 61b3250e6ffdaf193bfdce385a2ec4636daca73a
     ~thread_safe_mm_wrapper() {
         tm.deallocate(ptr);
         std::cout << "-------------------------------------------------------------------------";
@@ -122,7 +126,11 @@ int main()
     }
 
     std::for_each(tvec.begin(), tvec.end(), std::mem_fn(&std::thread::join));
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 61b3250e6ffdaf193bfdce385a2ec4636daca73a
     std::cout << "Complete.\n";
     return 0;
 }
@@ -134,8 +142,13 @@ int main()
 void test_thread_safe_alloc_free() {
     size_t maxBytes = 100000;
     thread_safe_mm_wrapper ob(rand() % maxBytes);
+<<<<<<< HEAD
     std::this_thread::sleep_for(std::chrono::milliseconds(rand() % 1000));        // to avoid alloc, dealloc operations
 }                                                                                 // run sequentially
+=======
+    std::this_thread::sleep_for(std::chrono::milliseconds(rand() % 1000));       // to avoid alloc, dealloc operations
+}                                                                               // run sequentially   
+>>>>>>> 61b3250e6ffdaf193bfdce385a2ec4636daca73a
 
 void test_stl_custom_alloc() {
     std::ifstream fIn;
