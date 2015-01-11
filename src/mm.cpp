@@ -80,7 +80,9 @@ void* MemoryManager::allocate (size_t size) {
     // Zero-size requests get NULL.
     if (size == 0) {
         return nullptr;
-    }
+    }    /* Pointer to the first BlockInfo in the free list, the list's head.
+    A pointer to the head of the free list in this implementation is
+    always stored in the first word in the heap.*/
 
     // Add one word for the initial size header.
     // Note that we don't need boundary tag when the block is used!
@@ -109,7 +111,9 @@ void* MemoryManager::allocate (size_t size) {
     h.removeFreeBlock(ptrFreeBlock);
 
     blockSize = sizeOfBlock(ptrFreeBlock->sizeAndTags);
-
+    /* Pointer to the first BlockInfo in the free list, the list's head.
+    A pointer to the head of the free list in this implementation is
+    always stored in the first word in the heap.*/
     if((blockSize - reqSize) >= MIN_BLOCK_SIZE) {
         // extracting precedingBlockUseTag
         precedingBlockUseTag = ptrFreeBlock->sizeAndTags & TAG_PRECEDING_USED;

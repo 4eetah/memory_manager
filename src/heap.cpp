@@ -44,13 +44,6 @@ Heap::Heap(Heap && other) {
 				Auxiliary functions
 ************************************************************************/
 
-/* Pointer to the first BlockInfo in the free list, the list's head.
-A pointer to the head of the free list in this implementation is
-always stored in the first word in the heap.*/
-BlockInfo* & Heap::head() {
-	return *(reinterpret_cast<BlockInfo**>(mem_start_brk));
-}
-
 /*
 * mem_init - initialize the memory system model
 */
@@ -124,6 +117,13 @@ void * Heap::mem_heap_hi() const {
 	return mem_max_addr - 1;
 }
 
+/* Pointer to the first BlockInfo in the free list, the list's head.
+A pointer to the head of the free list in this implementation is
+always stored in the first word in the heap.*/
+BlockInfo* & Heap::head() {
+    return *(reinterpret_cast<BlockInfo**>(mem_start_brk));
+}
+
 /***********************************************************************
 			Main functions
 ************************************************************************/
@@ -131,7 +131,7 @@ void * Heap::mem_heap_hi() const {
 /* Find a free block of the requested size in the free list.  Returns
 nullptr if no free block is large enough. */
 void * Heap::searchFreeBlock(size_t reqSize) {
-	BlockInfo* freeBlock = head();
+    BlockInfo* freeBlock = head();
 	while (freeBlock != nullptr){
 		if (sizeOfBlock(freeBlock->sizeAndTags) >= reqSize) {
 			return freeBlock;
@@ -145,13 +145,13 @@ void * Heap::searchFreeBlock(size_t reqSize) {
 
 /* Insert freeBlock at the head of the list.  (LIFO) */
 void Heap::insertFreeBlock(BlockInfo* freeBlock) {
-	BlockInfo* oldHead = head();
+    BlockInfo* oldHead = head();
 	freeBlock->next = oldHead;
 	if (oldHead != nullptr) {
 		oldHead->prev = freeBlock;
 	}
 	freeBlock->prev = nullptr;
-	head() = freeBlock;
+    head() = freeBlock;
 }
 
 /* Remove a free block from the free list. */
@@ -162,8 +162,8 @@ void Heap::removeFreeBlock(BlockInfo* freeBlock) {
 	if (nextFree != nullptr) {
 		nextFree->prev = prevFree;
 	}
-	if (freeBlock == head()) {
-		head() = nextFree;
+    if (freeBlock == head()) {
+        head() = nextFree;
 	}
 	else {
 		prevFree->next = nextFree;
@@ -292,7 +292,7 @@ void showBlock(BlockInfo * block) {
 
 /* Print the heap by iterating through it as an implicit free list. */
 void Heap::examineHeap() {
-	std::cout << "\nFREE_LIST_HEAD: " << (void*)head() << std::endl;
+    std::cout << "\nFREE_LIST_HEAD: " << (void*)head() << std::endl;
 	for_each(showBlock);
 	std::cout << "END OF HEAP\n\n";
 }

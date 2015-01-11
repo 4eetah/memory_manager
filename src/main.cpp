@@ -13,6 +13,7 @@
 #include "mm.h"
 #include "my_alloc.h"
 #include "thread_safe_mm.h"
+#include "heap.h"
 
 const int NUM_TRACEFILES = 9;
 
@@ -27,7 +28,7 @@ std::string tracefiles[] = {
     "binary-bal.rep",\
     "binary2-bal.rep"
 };
-std::string tracedir = "../traces/";
+std::string tracedir = "./traces/";
 
 struct traceop_t {
     enum {ALLOC, FREE} type;          /* type of request */
@@ -87,8 +88,12 @@ ThreadSafeMM thread_safe_mm_wrapper::tm;
 /**********************************************************
  * Main function
  * ********************************************************/
+
 int main()
 {
+    using namespace std;
+    cout << "size_t = " << sizeof(size_t) << endl;
+
 /* Testing mm package running time */
     std::cout << "<< Run speed test >>\n";
     std::cout << "<------------------------------------------------>\n";
@@ -136,7 +141,7 @@ void test_thread_safe_alloc_free() {
 
 void test_stl_custom_alloc() {
     std::ifstream fIn;
-    std::string mapInput = "../mapInput.txt";
+    std::string mapInput = "./mapInput.txt";
     fIn.open(mapInput);
     if (!fIn.is_open()) {
         std::cout << "Couldn't open " << mapInput << " file.\n";

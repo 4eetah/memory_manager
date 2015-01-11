@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++0x -pthread -Wall -pg     CMakeFiles/Allocator.dir/src/heap.cpp.o CMakeFiles/Allocator.dir/src/mm.cpp.o CMakeFiles/Allocator.dir/src/thread_safe_mm.cpp.o CMakeFiles/Allocator.dir/src/test.cpp.o  -o Allocator -rdynamic 
