@@ -42,7 +42,7 @@ public:
 	void * mem_heap_hi() const;
     BlockInfo* & head();
 
-	// main functions for working with heap data structure
+	// main functions for working with heap
     void * searchFreeBlock(size_t reqSize);
     void insertFreeBlock(BlockInfo * freeBlock);
     void removeFreeBlock(BlockInfo * freeBlock);
