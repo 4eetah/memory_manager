@@ -27,7 +27,8 @@ include_directories(${TEST_DIR})
 set(TESTS
 ${TEST_DIR}/macro.h
 ${TEST_DIR}/test1.h
-${TEST_DIR}/test2.h)
+${TEST_DIR}/test2.h
+)
 
 add_executable(${PROJECT_NAME} ${SRC_LIST} ${HDR_LIST} ${TESTS})
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -pthread -Wall -pg ")

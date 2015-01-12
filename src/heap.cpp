@@ -6,11 +6,16 @@
 #include "memlib.h"
 
 Heap::Heap(size_t size) : heapSize(size) {
-	mem_init(size);
+    try {
+        mem_init(size);
+    } catch (std::bad_alloc &) {
+        mem_deinit();
+        throw;
+    }
 }
 
 Heap::~Heap() {
-	mem_deinit();
+    mem_deinit();
 }
 
 Heap::Heap(const Heap & other) {
@@ -19,10 +24,9 @@ Heap::Heap(const Heap & other) {
 	try {
 		mem_start_brk = new char[heapSize];
 	}
-	catch (std::bad_alloc & ba) {
+    catch (std::bad_alloc &) {
 		std::cerr << "mem_copy_constructor: alloc error\n";
-		std::cerr << ba.what() << std::endl;
-		exit(EXIT_FAILURE);
+        throw;
 	}
 	mem_max_addr = mem_start_brk + heapSize;
 	mem_brk = mem_start_brk + (other.mem_brk - other.mem_start_brk);                  
@@ -52,10 +56,9 @@ void Heap::mem_init(size_t heapSize) {
 	try {
 		mem_start_brk = new char[heapSize];
 	}
-	catch (std::bad_alloc & ba) {
+    catch (std::bad_alloc &) {
 		std::cerr << "mem_init_vm: alloc error\n";
-		std::cerr << ba.what() << std::endl;
-		exit(EXIT_FAILURE);
+        throw;
 	}
 	mem_max_addr = mem_start_brk + heapSize;
 	mem_brk = mem_start_brk;                  /* heap is empty initially */
@@ -82,7 +85,8 @@ void Heap::mem_reset_brk() {
 */
 void* Heap::mem_sbrk(size_t incr) {
 	char *old_brk = mem_brk;
-	if ((incr < 0) || ((mem_brk + incr) > mem_max_addr)) {
+    size_t freeSpace = mem_max_addr - mem_brk;
+    if ((incr < 0) || (incr > freeSpace)) {
 		throw mem_exception("ERROR: mem_sbrk failed. Ran out of memory...\n");
 	}
 	mem_brk += incr;

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <memory>
 #include "block.h"
 
 #define UNITTEST
@@ -18,9 +19,9 @@ private:
 	static const size_t MAX_HEAP = (20 * (1 << 20));  /* 20 MB */
     size_t heapSize;
 
-	char *mem_start_brk;  /* start of the heap */
-	char *mem_brk;        /* current heap area that is in use : [mem_start_brk, mem_brk ] */
-	char *mem_max_addr;   /* max legal heap address */
+    char * mem_start_brk;  /* start of the heap */
+    char * mem_brk;        /* current heap area that is in use : [mem_start_brk, mem_brk ] */
+    char * mem_max_addr;   /* max legal heap address */
 
 	void mem_init(size_t);
     void mem_deinit();
