@@ -1,3 +1,0 @@
-/home/den/Allocator/CMakeFiles/Allocator.dir
-/home/den/Allocator/CMakeFiles/test1.dir
-/home/den/Allocator/CMakeFiles/test2.dir

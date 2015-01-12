@@ -1,3 +1,0 @@
-# Hashes of file build rules.
-3b664651af298b50f9a07809f1590683 test1.cpp
-10784e93e139787a8e4df2a77aa7bd30 test2.cpp
