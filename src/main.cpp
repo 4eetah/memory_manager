@@ -97,13 +97,10 @@ int main()
 /* Testing mm package running time */
     std::cout << "<< Run speed test >>\n";
     std::cout << "<------------------------------------------------>\n";
-    std::thread evalThread([] {
-        std::cout << "new package evaluation\n";
-        eval_package_speed(eval_new_speed);
-        std::cout << "\nmm package evaluation\n";
-        eval_package_speed(eval_mm_speed);
-    });
-    evalThread.join();
+    std::cout << "new package evaluation\n";
+    eval_package_speed(eval_new_speed);
+    std::cout << "\nmm package evaluation\n";
+    eval_package_speed(eval_mm_speed);
     std::cout << "\nComplete.\n\n";
 
 /* Test STL custom allocator using map */
