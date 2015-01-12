@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++0x -pthread -Wall -pg     CMakeFiles/test1.dir/test1.cpp.o CMakeFiles/test1.dir/src/heap.cpp.o CMakeFiles/test1.dir/src/mm.cpp.o CMakeFiles/test1.dir/src/thread_safe_mm.cpp.o  -o test1 -rdynamic 

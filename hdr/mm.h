@@ -14,14 +14,14 @@ private:
     Heap h;
 
 public:
-	MemoryManager();
-	~MemoryManager();
-	MemoryManager(const MemoryManager&);
+    MemoryManager();
+    ~MemoryManager();
+    MemoryManager(const MemoryManager&);
     MemoryManager& operator=(const MemoryManager&) = delete;
-	MemoryManager(MemoryManager &&);
-	MemoryManager& operator=(MemoryManager &&) = delete;
+    MemoryManager(MemoryManager &&);
+    MemoryManager& operator=(MemoryManager &&) = delete;
 
-// main function 
+    //main functions
     void * allocate (size_t size);
     void deallocate (void *ptr);
     int checkHeap();

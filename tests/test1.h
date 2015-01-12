@@ -18,7 +18,7 @@ public:
         delete ph;
     }
 
-    void testConstruction() {
+    void test_construction() {
         Heap * ptr;
         TS_ASSERT_THROWS_NOTHING(ptr = new Heap());
         TS_ASSERT_DIFFERS(nullptr, ptr);
@@ -28,13 +28,13 @@ public:
         delete ptr;
     }
 
-    void testCopyConstruction() {
+    void test_copy_construction() {
         Heap * ptr = new Heap(*ph);
         TS_ASSERT_EQUALS(ptr->mem_heapsize(), ph->mem_heapsize());
         delete ptr;
     }
 
-    void testMoveConstruction() {
+    void test_move_construction() {
         size_t oldSize = ph->mem_heapsize();
         void * lo = ph->mem_heap_lo();
         void * hi = ph->mem_heap_hi();
@@ -47,7 +47,7 @@ public:
         delete ptr;
     }
 
-    void testMemSbrk() {
+    void test_mem_sbrk() {
         TS_ASSERT_DIFFERS(nullptr, ph);
         size_t bigData = std::numeric_limits<size_t>::max();
         TS_ASSERT_THROWS(ph->mem_sbrk(bigData), mem_exception);

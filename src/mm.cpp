@@ -6,7 +6,7 @@
 using namespace std;
 
 MemoryManager::MemoryManager() {
-	initialize();
+    initialize();
 }
 
 MemoryManager::MemoryManager(const MemoryManager & other)
