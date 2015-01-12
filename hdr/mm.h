@@ -15,7 +15,7 @@ private:
 
 public:
     MemoryManager();
-    ~MemoryManager();
+    virtual ~MemoryManager();
     MemoryManager(const MemoryManager&);
     MemoryManager& operator=(const MemoryManager&) = delete;
     MemoryManager(MemoryManager &&);
